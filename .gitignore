@@ -1,35 +1,19 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignore everything in the project root except specific files and directories
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Ignore all files in the root directory
+/*
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# But do not ignore these specific files and directories
+!.gitignore
+!package.json
+!package-lock.json
+!tsconfig.json
+!README.md
+!public/
+!tailwind.config.json
+!next.config.json
+!app/
+!jsconfig.json
+!postcss.config.js
+!components
+!eslintric.json
