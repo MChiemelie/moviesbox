@@ -1,15 +1,16 @@
 "use client";
 
+import { Sidebar, Details } from "@/components";
 import { useState, useEffect } from "react";
-import { Detail, Sidebar } from "@/components";
 
-export default function Page(params) {
+export default function Page({ params }) {
   const [movieData, setMovieData] = useState(null);
-  const movieId = params.params.id;
+  const movieId = params.id;
 
   useEffect(() => {
     async function fetchMovieDetails() {
       try {
+        const apiKey = process.env.API_KEY; // Replace with your API key
         const response = await fetch(
           `https://api.themoviedb.org/3/movie/${movieId}?api_key=84d2cfd8fd13eb27e7362fd6a35db3a3`
         );
@@ -31,7 +32,7 @@ export default function Page(params) {
   return (
     <div className="flex">
       <Sidebar />
-      <Detail movieData={movieData} />
+      <Details movieData={movieData} />
     </div>
   );
 }

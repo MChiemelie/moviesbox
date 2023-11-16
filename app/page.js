@@ -1,8 +1,8 @@
-import { Featured, Footer, Header } from "@/components"
+import { Nav, Featured, Footer, Header } from "@/components"
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <Header />
       <Featured />
       <Footer />
